@@ -1,0 +1,8 @@
+item.vaccinebuster.syringe.name=Syringe
+item.vaccinebuster.needle.name=Needle
+item.vaccinebuster.vaccine.name=COVID-19 Vaccine
+item.vaccinebuster.vaccineReset.name
+
+tc.research_name.TAINTVACCINE=COVID-19 Vaccine
+tc.research_text.TAINTVACCINE=End the Pandemic!
+tc.research_page.TAINTVACCINE.1=By infusing toxic materials with victus and sano essentia to purify them, with the regenerative properties of voidmetal and a golden apple, you've made a vaccine that will last forever and persist through death.
