@@ -1,7 +1,7 @@
 package com.midnight.vaccinebuster;
 
-import com.midnight.vaccinebuster.potion.PotionAntiTaint;
-import com.midnight.vaccinebuster.potion.VBPotions;
+import com.midnight.vaccinebuster.potions.PotionAntiTaint;
+import com.midnight.vaccinebuster.potions.VBPotions;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,9 +13,8 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 public class ItemVaccineReset extends Item {
-	
-	public ItemVaccineReset() 
-	{
+
+	public ItemVaccineReset() {
 		setUnlocalizedName(VaccineBuster.MODID + "_" + VBStrings.ItemVaccineResetName);
 		GameRegistry.registerItem(this, VBStrings.ItemVaccineResetName);
 		setCreativeTab(CreativeTabs.tabMaterials);
@@ -33,12 +32,13 @@ public class ItemVaccineReset extends Item {
 		}
 		player.removePotionEffect(VBPotions.antiTaintID);
 		return itemstack;
-		
+
 	}
+
 	public static void writeCustomNBT(EntityLivingBase entity) {
-		if (!entity.getEntityData().getBoolean("TaintVaccine")) {
+		if (entity.getEntityData().getBoolean("TaintVaccine")) {
 			entity.getEntityData().setBoolean("TaintVaccine", false);
 		}
 	}
-	
+
 }

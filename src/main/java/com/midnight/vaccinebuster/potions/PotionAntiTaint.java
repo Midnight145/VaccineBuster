@@ -1,4 +1,4 @@
-package com.midnight.vaccinebuster.potion;
+package com.midnight.vaccinebuster.potions;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -22,7 +22,7 @@ import thaumcraft.common.config.Config;
 import java.util.ArrayList;
 
 import com.midnight.vaccinebuster.items.ItemVaccine;
-import com.midnight.vaccinebuster.potion.VBPotions;
+import com.midnight.vaccinebuster.potions.VBPotions;
 
 public class PotionAntiTaint extends Potion {
 

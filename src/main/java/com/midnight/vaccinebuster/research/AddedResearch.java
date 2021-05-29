@@ -13,6 +13,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigItems;
+import thaumcraft.common.config.ConfigBlocks;
 import thaumic.tinkerer.common.item.kami.ItemKamiResource;
 
 public class AddedResearch {
@@ -49,20 +50,21 @@ public class AddedResearch {
 						new ItemStack(ConfigItems.itemResource, 1, 12),
 						new ItemStack(ConfigItems.itemResource, 1, 16), // void metal
 						new ItemStack(ConfigItems.itemResource, 1, 16),
+						new ItemStack(ConfigBlocks.blockCustomPlant, 1, 4), // ethereal bloom
 						new ItemStack(Items.golden_apple, 1, 1)
 				}
 		);
 		
 		ResearchItem taintVaccineResearch = new ResearchItem(
 				"TAINTVACCINE", 
-				"ARTIFICE", 
+				"ALCHEMY", 
 				new AspectList().add(Aspect.TAINT, 5).add(Aspect.MAGIC, 5).add(Aspect.HEAL, 5), 
-				-1, -4, 2, new 
+				-1, -6, 4, new 
 				ItemStack(VBItems.vaccine));
 		
 		taintVaccineResearch.setPages(new ResearchPage("tc.research_page.TAINTVACCINE.1"), new ResearchPage(taintVaccineRecipe));
 		taintVaccineResearch.setConcealed();
-		taintVaccineResearch.setParents("INFUSION");
+		taintVaccineResearch.setParents("VOIDMETAL");
 		taintVaccineResearch.registerResearchItem();
 	}
 	

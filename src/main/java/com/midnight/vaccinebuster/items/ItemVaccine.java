@@ -2,8 +2,8 @@ package com.midnight.vaccinebuster.items;
 
 import com.midnight.vaccinebuster.VBStrings;
 import com.midnight.vaccinebuster.VaccineBuster;
-import com.midnight.vaccinebuster.potion.PotionAntiTaint;
-import com.midnight.vaccinebuster.potion.VBPotions;
+import com.midnight.vaccinebuster.potions.PotionAntiTaint;
+import com.midnight.vaccinebuster.potions.VBPotions;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.Phase;
@@ -44,13 +44,10 @@ public class ItemVaccine extends Item {
 		return itemstack;
 		
 	}
+
 	public static void writeCustomNBT(EntityLivingBase entity) {
-		System.out.println("In writeCustomNBT");
 		if (!entity.getEntityData().getBoolean("TaintVaccine")) {
 			entity.getEntityData().setBoolean("TaintVaccine", true);
 		}
-			boolean temp = entity.getEntityData().getBoolean("TaintVaccine");
-			System.out.println("Value of temp: " + Boolean.toString(temp));
-			System.out.println("after println getboolean");
 	}
 }

@@ -1,5 +1,7 @@
 package com.midnight.vaccinebuster.items;
 
+import com.midnight.vaccinebuster.ItemVaccineReset;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -21,13 +23,13 @@ public class VBItems {
 	public static Item vaccine;
 	public static Item syringe;
 	public static Item needle;
-	
+	public static Item vaccineReset;
+
 	public static void init() {
 		vaccine = new ItemVaccine();
 		syringe = new ItemSyringe();
 		needle = new ItemNeedle();
+		vaccineReset = new ItemVaccineReset();
 	}
 
 }
-
-
